@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLoom Editor</title>
+    <link rel="shortcut icon" type="x-icon" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+ 
+
+    <!-- Header with logo -->
+    <header>
+        <img src="logo.png" alt="CodeLoom Logo">
+        <h1>CodeLoom</h1>
+        <div class="resize-controls">
+            <button onclick="resizeOutput('laptop')" title="Laptop View">💻</button>
+            <button onclick="resizeOutput('tablet')" title="Tablet View">📱</button>
+            <button onclick="resizeOutput('mobile')" title="Mobile View">📞</button>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <div class="container fade-in">
+        <div class="left">
+            <label for="html-code">HTML</label>
+            <textarea id="html-code" placeholder="Write HTML here..." onkeyup="run(); suggest('html');"></textarea>
+            <label for="css-code">CSS</label>
+            <textarea id="css-code" placeholder="Write CSS here..." onkeyup="run(); suggest('css');"></textarea>
+            <label for="js-code">JavaScript</label>
+            <textarea id="js-code" placeholder="Write JavaScript here..." onkeyup="run(); suggest('js');"></textarea>
+        </div>
+        <div class="right">
+            <div class="output-header">
+                <label>Output</label>
+                
+            </div>
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
